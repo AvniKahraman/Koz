@@ -1,11 +1,17 @@
 package com.example.myapplication;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -17,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     private VeriAdapter veriAdapter;
     private ArrayList<String> kayitlarList = new ArrayList<>();
     private static final int MAX_KAYIT_SAYISI = 6;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         playButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                secmece();
             }
         });
 
@@ -61,6 +68,9 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, "Maksimum " + MAX_KAYIT_SAYISI + " kayıt ekleyebilirsiniz", Toast.LENGTH_SHORT).show();
                 }
             }
+
+
+
         });
     }
 
@@ -73,4 +83,13 @@ public class MainActivity extends AppCompatActivity {
         kayitlarList.addAll(dbHelper.getTumKayitlar());
         veriAdapter.notifyDataSetChanged();
     }
+
+    private void secmece()
+    {
+        Intent intent = new Intent(MainActivity.this,SelectChoice.class);
+        startActivity(intent);
+        super.getOnBackPressedDispatcher();
+    }
+
+
 }
