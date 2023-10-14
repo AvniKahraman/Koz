@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    tools:context=".SelectChoice"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/gameborder">
+
+        <ImageView
+            android:layout_width="137dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/gameborder"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="10dp"
+            android:id="@+id/gamepicture"/>
+
+
+        <TextView
+            android:layout_width="195dp"
+            android:layout_height="34dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/gamepicture"
+            android:layout_marginEnd="25dp"
+            android:text="DENEME"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:id="@+id/baslik"/>
+
+        <TextView
+            android:layout_width="179dp"
+            android:layout_height="76dp"
+            android:layout_below="@+id/baslik"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="20dp"
+            android:layout_toEndOf="@+id/gamepicture"
+            android:text="DENEME"
+            android:textSize="15dp"
+            android:id="@+id/gametext"/>
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>
