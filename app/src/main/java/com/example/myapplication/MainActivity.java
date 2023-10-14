@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
                     titleEditText.setText("");
                     guncelleKayitlarList();
                 } else {
-                    Toast.makeText(MainActivity.this, "Maksimum " + MAX_KAYIT_SAYISI + " kayıt ekleyebilirsiniz", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Maksimum   kayıt ekleyebilirsiniz", Toast.LENGTH_SHORT).show();
                 }
             }
 
